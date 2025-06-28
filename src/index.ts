@@ -23,6 +23,8 @@ import workspaceRoutes from "./routes/workspace.route";
 const app = express();
 const BASE_PATH = config.BASE_PATH;
 
+app.set("trust proxy", 1); // ✅ ADD THIS LINE HERE
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
